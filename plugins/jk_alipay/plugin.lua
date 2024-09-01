@@ -61,7 +61,7 @@ function plugin.formItems(payType, payChannel)
                         tip = '',
                     },
                     placeholder = "请输入收款码地址",
-                    when = "this.formModel.options.type == 'url'",
+                    when = "this.formModel.options.type == 'qrcode'",
                     options = {
                         append_deqrocde = 1, -- 增加解析二维码功能
                     },
@@ -92,6 +92,52 @@ function plugin.formItems(payType, payChannel)
                     }
                 },
                 {
+                    name = 'pid',
+                    label = 'PID',
+                    type = 'input',
+                    default = "",
+                    options = {
+                        tip = '',
+                    },
+                    placeholder = "请输入PID",
+                    when = "this.formModel.options.type == 'pid'",
+                    rules = {
+                        {
+                            required = true,
+                            trigger = { "input", "blur" },
+                            message = "请输入",
+                        }
+                    }
+                },
+                {
+                    name = 'qrcode_mod',
+                    label = '二维码模式',
+                    type = 'select',
+                    default = "9",
+                    options = {
+                        tip = '',
+                    },
+                    placeholder = "请选择二维码模式",
+                    when = "this.formModel.options.type == 'pid'",
+                    values = {
+                        {
+                            label = "模式9",
+                            value = "9"
+                        },
+                        {
+                            label = "模式10",
+                            value = "10"
+                        },
+                    },
+                    rules = {
+                        {
+                            required = true,
+                            trigger = { "input", "blur" },
+                            message = "请输入",
+                        }
+                    }
+                },
+                {
                     name = 'type',
                     label = '收款码类型',
                     type = 'select',
@@ -102,12 +148,16 @@ function plugin.formItems(payType, payChannel)
                     placeholder = "请选择收款码类型",
                     values = {
                         {
-                            label = "地址",
-                            value = "url"
+                            label = "二维码",
+                            value = "qrcode"
                         },
                         {
                             label = "图片",
                             value = "image"
+                        },
+                        {
+                            label = "PID",
+                            value = "pid"
                         },
                     },
                     rules = {
@@ -142,6 +192,32 @@ function plugin.create(orderInfo, pluginOptions, ...)
             err_code = 200,
             err_message = ""
         })
+
+    elseif options['type'] == 'pid' then
+        if options['qrcode_mod'] == '9' then
+            return json.encode({
+                type = "qrcode",
+                qrcode = "https://ds.alipay.com/?from=pc&appId=20000116&actionType=toAccount&goBack=NO&amount=" .. orderInfo.trade_amount_str .. "&userId=" .. options['pid'] .. "&memo=" .. orderInfo.order_id,
+                url = "",
+                content = "",
+                out_trade_no = '',
+                err_code = 200,
+                err_message = ""
+            })
+        elseif options['qrcode_mod'] == '10' then
+            return json.encode({
+                type = "qrcode",
+                qrcode_use_short_url = 1,
+                qrcode = "alipayqr://platformapi/startapp?saId=20000032&url=alipays%3A%2F%2Fplatformapi%2Fstartapp%3FappId%3D20000123%26actionType%3Dscan%26biz_data%3D%257B%2522s%2522%253A%2522money%2522%252C%2522u%2522%253A%2522" .. options['pid'] .. "%2522%252C%2522a%2522%253A%2522" .. orderInfo.trade_amount_str .. "%2522%252C%2522m%2522%253A%2522" .. orderInfo.order_id .. "%2522%257D",
+                url = "",
+                content = "",
+                scheme = "alipayqr://platformapi/startapp?saId=20000032&url=alipays%3A%2F%2Fplatformapi%2Fstartapp%3FappId%3D20000123%26actionType%3Dscan%26biz_data%3D%257B%2522s%2522%253A%2522money%2522%252C%2522u%2522%253A%2522" .. options['pid'] .. "%2522%252C%2522a%2522%253A%2522" .. orderInfo.trade_amount_str .. "%2522%252C%2522m%2522%253A%2522" .. orderInfo.order_id .. "%2522%257D",
+                out_trade_no = '',
+                err_code = 200,
+                err_message = ""
+            })
+        end
+
     end
 
     return json.encode({
