@@ -140,7 +140,6 @@ function plugin.create(orderInfo, pluginOptions, ...)
             err_code = 200,
             err_message = ""
         })
-
     end
 
     return json.encode({
