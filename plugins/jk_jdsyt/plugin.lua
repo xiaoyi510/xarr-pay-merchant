@@ -7,6 +7,7 @@ package.path = package.path .. ";." .. projectDir .. "../common/?.lua"
 local funcs = require("funcs")
 local http = require("http")
 local json = require("json")
+local helper = require("helper")
 
 -- 定义常量
 PAY_JK_JDSYT = "jk_jdyst"
@@ -132,10 +133,10 @@ function plugin.parseMsg(msg)
             -- 判断渠道是否一样的
             if v.Code == msg['channel_code'] then
                 -- 匹配标题
-                local titleMatched = regexp_match(msg.title, v.TitleReg)
+                local titleMatched =  helper.regexp_match(msg.title, v.TitleReg)
                 if titleMatched then
                     -- 调用正则
-                    local matched, matchGroups = regexp_match_group(msg.content, v.ContentReg)
+                    local matched, matchGroups =  helper.regexp_match_group(msg.content, v.ContentReg)
 
                     -- 判断匹配是否成功
                     if matched == true then

@@ -7,6 +7,7 @@ package.path = package.path .. ";." .. projectDir .. "../common/?.lua"
 local funcs = require("funcs")
 local http = require("http")
 local json = require("json")
+local helper = require("helper")
 
 -- 定义常量
 PAY_ALIPAY_APP = "alipay_app"
@@ -128,6 +129,10 @@ function plugin.formItems(payType, payChannel)
                             label = "模式10",
                             value = "10"
                         },
+                        {
+                            label = "模式11",
+                            value = "11"
+                        },
                     },
                     rules = {
                         {
@@ -216,6 +221,17 @@ function plugin.create(orderInfo, pluginOptions, ...)
                 err_code = 200,
                 err_message = ""
             })
+        elseif options['qrcode_mod'] == '11' then
+            return json.encode({
+                type = "html",
+                qrcode_use_short_url = 1,
+                url = "",
+                content = plugin.buildMod11Html(options['pid'], orderInfoDe.trade_amount_str, orderInfoDe.order_id),
+                scheme = "alipays://platformapi/startapp?appId=20000067&url="..helper.url_encode("https://render.alipay.com/p/s/i?scheme="..helper.url_encode("alipays://platformapi/startapp?appId=20000180&url="..helper.url_encode(orderPayHelper.get_toapp_url(orderInfoDe.order_id,orderInfoDe.host)))),
+                out_trade_no = '',
+                err_code = 200,
+                err_message = ""
+            })
         end
 
     end
@@ -285,10 +301,10 @@ function plugin.parseMsg(msg)
             -- 判断渠道是否一样的
             if v.Code == msg['channel_code'] then
                 -- 匹配标题
-                local titleMatched = regexp_match(msg.title, v.TitleReg)
+                local titleMatched =  helper.regexp_match(msg.title, v.TitleReg)
                 if titleMatched then
                     -- 调用正则
-                    local matched, matchGroups = regexp_match_group(msg.content, v.ContentReg)
+                    local matched, matchGroups =  helper.regexp_match_group(msg.content, v.ContentReg)
 
                     -- 判断匹配是否成功
                     if matched == true then
@@ -320,4 +336,59 @@ function plugin.parseMsg(msg)
         err_message = "未能匹配"
     })
 
+end
+
+
+function plugin.buildMod11Html (pid ,money,order_id)
+    return [[<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>收银台</title>
+    <script src="//gw.alipayobjects.com/as/g/h5-lib/alipayjsapi/3.1.1/alipayjsapi.min.js"></script>
+</head>
+<body>
+<script>
+    var userId = "]].. pid ..[[";
+    var money = "]].. money ..[[";
+    var remark = "]].. order_id ..[[";
+
+    function returnApp() {
+        AlipayJSBridge.call("exitApp")
+    }
+
+    function ready(a) {
+        window.AlipayJSBridge ? a && a() : document.addEventListener("AlipayJSBridgeReady", a, !1)
+    }
+
+    ready(function () {
+        try {
+            var a = {
+                actionType: "scan",
+                u: userId,
+                a: money,
+                m: remark,
+                biz_data: {
+                    s: "money",
+                    u: userId,
+                    a: money,
+                    m: remark
+                }
+            }
+        } catch (b) {
+            returnApp()
+        }
+        AlipayJSBridge.call("startApp", {
+            appId: "20000123",
+            param: a
+        }, function (a) { })
+    });
+    document.addEventListener("resume", function (a) {
+        returnApp()
+    });
+</script>
+</body>
+</html>]]
 end
