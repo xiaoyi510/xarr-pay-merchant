@@ -1,0 +1,24 @@
+{
+  "plguns": [
+    {
+      "name": "jk_qqpay",
+      "version": "1.0",
+      "download_url": "https://raw.githubusercontent.com/xiaoyi510/xarr-pay-merchant/master/plugins/jk_qqpay/plugin.lua"
+    },
+    {
+      "name": "jk_alipay",
+      "version": "1.0",
+      "download_url": "https://raw.githubusercontent.com/xiaoyi510/xarr-pay-merchant/master/plugins/jk_alipay/plugin.lua"
+    },
+    {
+      "name": "jk_wxpay",
+      "version": "1.0",
+      "download_url": "https://raw.githubusercontent.com/xiaoyi510/xarr-pay-merchant/master/plugins/jk_wxpay/plugin.lua"
+    },
+    {
+      "name": "jk_jdsyt",
+      "version": "1.0",
+      "download_url": "https://raw.githubusercontent.com/xiaoyi510/xarr-pay-merchant/master/plugins/jk_jdsyt/plugin.lua"
+    }
+  ]
+}
