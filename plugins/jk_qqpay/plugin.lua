@@ -49,7 +49,6 @@ end
 
 -- 获取form表单
 function plugin.formItems(payType, payChannel)
-    if payChannel == PAY_ALIPAY_APP then
         return json.encode({
             inputs = {
                 {
@@ -96,7 +95,7 @@ function plugin.formItems(payType, payChannel)
                     name = 'type',
                     label = '收款码类型',
                     type = 'select',
-                    default = "url",
+                    default = "qrcode",
                     options = {
                         tip = '',
                     },
@@ -122,9 +121,6 @@ function plugin.formItems(payType, payChannel)
                 },
             },
         })
-    end
-
-    return "{}"
 
 end
 
