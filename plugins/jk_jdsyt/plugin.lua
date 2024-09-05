@@ -23,12 +23,12 @@ plugin = {
         version = "1.0",
         -- 支持支付类型
         channels = {
-            ebank = {
+            bank = {
                 {
                     label = '京东收银台-监控端',
                     value = PAY_JK_JDSYT,
                     -- 绑定支付方式
-                    bind_pay_type = { "alipay", "wxpay", "ebank" },
+                    bind_pay_type = { "alipay", "wxpay", "bank" },
 
                     -- 支持上报
                     report = 1,
