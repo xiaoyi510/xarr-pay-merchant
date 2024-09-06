@@ -9,7 +9,7 @@ local http = require("http")
 local json = require("json")
 
 -- 定义常量
-PAY_QQPAY_APP = "qqpay_app"
+PAY_QQPAY_APP = "qq_pc_qrcode"
 
 --- 插件信息
 plugin = {
