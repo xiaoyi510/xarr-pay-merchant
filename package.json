@@ -18,7 +18,67 @@
                 "update_time": "2024-09-12 18:31:58",
                 "version": "1.0",
                 "download_uri": "https://raw.githubusercontent.com/xiaoyi510/xarr-pay-merchant/master/plugins/jk_qqpay/plugin.lua"
-            }
+            },
+            {
+                "name": "jk_wxpay",
+                "title": "监控插件 - 微信",
+                "type": 1,
+                "description": "监控插件",
+                "author": "包子",
+                "homepage": "https://www.xarr.cn",
+                "preview_url": "",
+                "preview_img_url": "",
+                "external_support_url": "",
+                "external_repository_url": "",
+                "update_time": "2024-09-12 18:31:58",
+                "version": "1.0",
+                "download_uri": "https://raw.githubusercontent.com/xiaoyi510/xarr-pay-merchant/master/plugins/jk_qqpay/plugin.lua"
+            },
+            {
+                "name": "jk_alipay",
+                "title": "监控插件 - 支付宝",
+                "type": 1,
+                "description": "监控插件",
+                "author": "包子",
+                "homepage": "https://www.xarr.cn",
+                "preview_url": "",
+                "preview_img_url": "",
+                "external_support_url": "",
+                "external_repository_url": "",
+                "update_time": "2024-09-12 18:31:58",
+                "version": "1.0",
+                "download_uri": "https://raw.githubusercontent.com/xiaoyi510/xarr-pay-merchant/master/plugins/jk_qqpay/plugin.lua"
+            },
+            {
+                "name": "jk_jdsyt",
+                "title": "监控插件 - 京东收银台",
+                "type": 1,
+                "description": "监控插件",
+                "author": "包子",
+                "homepage": "https://www.xarr.cn",
+                "preview_url": "",
+                "preview_img_url": "",
+                "external_support_url": "",
+                "external_repository_url": "",
+                "update_time": "2024-09-12 18:31:58",
+                "version": "1.0",
+                "download_uri": "https://raw.githubusercontent.com/xiaoyi510/xarr-pay-merchant/master/plugins/jk_qqpay/plugin.lua"
+            },
+            {
+                "name": "epay",
+                "title": "易支付",
+                "type": 1,
+                "description": "易支付",
+                "author": "包子",
+                "homepage": "https://www.xarr.cn",
+                "preview_url": "",
+                "preview_img_url": "",
+                "external_support_url": "",
+                "external_repository_url": "",
+                "update_time": "2024-09-12 18:31:58",
+                "version": "1.0",
+                "download_uri": "https://raw.githubusercontent.com/xiaoyi510/xarr-pay-merchant/master/plugins/jk_qqpay/plugin.lua"
+            },
         ]
     }
 }
