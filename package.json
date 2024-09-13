@@ -78,7 +78,7 @@
                 "update_time": "2024-09-12 18:31:58",
                 "version": "1.0",
                 "download_uri": "https://raw.githubusercontent.com/xiaoyi510/xarr-pay-merchant/master/plugins/jk_qqpay/plugin.lua"
-            },
+            }
         ]
     }
 }
