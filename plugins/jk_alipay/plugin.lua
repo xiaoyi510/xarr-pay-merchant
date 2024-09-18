@@ -267,7 +267,7 @@ function plugin.parseMsg(msg)
     local reportApps = {
         ["com.eg.android.AlipayGphone"] = {
             {
-                TitleReg = "微信支付",
+                TitleReg = "收款通知",
                 ContentReg = "通过扫码向你付款(?<amount>[\\d\\.]+)元",
                 Code = PAY_ALIPAY_APP
             },
