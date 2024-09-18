@@ -8,6 +8,7 @@ local funcs = require("funcs")
 local http = require("http")
 local json = require("json")
 local helper = require("helper")
+local orderPayHelper = require("orderPayHelper")
 
 -- 定义常量
 PAY_ALIPAY_APP = "alipay_app"
