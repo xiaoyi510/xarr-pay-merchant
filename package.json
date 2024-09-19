@@ -18,7 +18,7 @@
                 "external_repository_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
                 "update_time": 1726753440,
                 "version": "1.0.0",
-                "download_uri": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/jk_qqpay.zip",
+                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/jk_qqpay.zip",
                 "download_filename": "jk_qqpay.zip",
                 "md5": "7f13c1846270c3a31107e04563c89b87"
             },
@@ -36,7 +36,7 @@
                 "external_repository_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
                 "update_time": 1726753440,
                 "version": "1.0.0",
-                "download_uri": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/jk_wechat.zip",
+                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/jk_wechat.zip",
                 "download_filename": "jk_wechat.zip",
                 "md5": "2cf8abb4c3ada87b9381450531e17d5f"
             },
@@ -54,7 +54,7 @@
                 "external_repository_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
                 "update_time": 1726753440,
                 "version": "1.0.0",
-                "download_uri": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/jk_alipay.zip",
+                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/jk_alipay.zip",
                 "download_filename": "jk_alipay.zip",
                 "md5": "c0319a4fb9cf4fc843ba182c3c2d0d30"
             },
@@ -72,7 +72,7 @@
                 "external_repository_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
                 "update_time": 1726753440,
                 "version": "1.0.0",
-                "download_uri": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/jk_jdsyt.zip",
+                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/jk_jdsyt.zip",
                 "download_filename": "jk_jdsyt.zip",
                 "md5": "11c8fdaa1acf161cc9ece668c46553e3"
             }
