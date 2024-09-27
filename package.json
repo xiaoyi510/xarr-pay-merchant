@@ -75,6 +75,24 @@
                 "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/jk_jdsyt.zip",
                 "download_filename": "jk_jdsyt.zip",
                 "md5": "11c8fdaa1acf161cc9ece668c46553e3"
+            },
+            {
+                "uuid": "ec22d323-8f19-4072-8106-fdaae3b9a6cf",
+                "name": "epusdt",
+                "title": "Easy Payment Usdt",
+                "type": 1,
+                "description": "Epusdt（全称：Easy Payment Usdt）是一个由Go语言编写的私有化部署Usdt支付中间件(Trc20网络)",
+                "author": "包子",
+                "homepage": "https://www.xarr.cn",
+                "preview_url": "",
+                "preview_img_url": "https://apps.xarr.cn/assets/images/tether.svg",
+                "external_support_url": "https://github.com/assimon/epusdt",
+                "external_repository_url": "https://github.com/assimon/epusdt",
+                "update_time": 1727423443,
+                "version": "1.0.0",
+                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/epusdt.zip",
+                "download_filename": "epusdt.zip",
+                "md5": "209bfc51fb25043e23081532b3ecf3e8"
             }
         ]
     }
