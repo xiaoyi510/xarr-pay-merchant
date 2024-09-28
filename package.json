@@ -89,10 +89,10 @@
                 "external_support_url": "https://github.com/assimon/epusdt",
                 "external_repository_url": "https://github.com/assimon/epusdt",
                 "update_time": 1727423443,
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/epusdt.zip",
                 "download_filename": "epusdt.zip",
-                "md5": "e787b7dff46bccb9c8dd20efaebbaa2f"
+                "md5": "301becbb4326b31f0f17ad42ce0c2bd5"
             }
         ]
     }
