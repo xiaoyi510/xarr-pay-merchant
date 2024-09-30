@@ -134,6 +134,10 @@ function plugin.formItems(payType, payChannel)
                             label = "模式11",
                             value = "11"
                         },
+                        {
+                            label = "转账确认单",
+                            value = "12"
+                        },
                     },
                     rules = {
                         {
@@ -147,7 +151,7 @@ function plugin.formItems(payType, payChannel)
                     name = 'type',
                     label = '收款码类型',
                     type = 'select',
-                    default = "url",
+                    default = "qrcode",
                     options = {
                         tip = '',
                     },
@@ -158,7 +162,7 @@ function plugin.formItems(payType, payChannel)
                             value = "qrcode"
                         },
                         {
-                            label = "图片",
+                            label = "二维码图片",
                             value = "image"
                         },
                         {
@@ -228,7 +232,19 @@ function plugin.create(orderInfo, pluginOptions, ...)
                 qrcode_use_short_url = 1,
                 url = "",
                 content = plugin.buildMod11Html(options['pid'], orderInfoDe.trade_amount_str, orderInfoDe.order_id),
-                scheme = "alipays://platformapi/startapp?appId=20000067&url="..helper.url_encode("https://render.alipay.com/p/s/i?scheme="..helper.url_encode("alipays://platformapi/startapp?appId=20000180&url="..helper.url_encode(orderPayHelper.get_toapp_url(orderInfoDe.order_id,orderInfoDe.host)))),
+                scheme = "alipays://platformapi/startapp?appId=20000067&url=" .. helper.url_encode("https://render.alipay.com/p/s/i?scheme=" .. helper.url_encode("alipays://platformapi/startapp?appId=20000180&url=" .. helper.url_encode(orderPayHelper.get_toapp_url(orderInfoDe.order_id, orderInfoDe.host)))),
+                out_trade_no = '',
+                err_code = 200,
+                err_message = ""
+            })
+
+        elseif options['qrcode_mod'] == '12' then
+            return json.encode({
+                type = "html",
+                qrcode_use_short_url = 1,
+                url = "",
+                content = plugin.buildMod12Html(options['pid'], orderInfoDe.trade_amount_str, orderInfoDe.order_id),
+                scheme = "alipays://platformapi/startapp?appId=20000067&url=" .. helper.url_encode("https://render.alipay.com/p/s/i?scheme=" .. helper.url_encode("alipays://platformapi/startapp?appId=20000180&url=" .. helper.url_encode(orderPayHelper.get_toapp_url(orderInfoDe.order_id, orderInfoDe.host)))),
                 out_trade_no = '',
                 err_code = 200,
                 err_message = ""
@@ -241,6 +257,7 @@ function plugin.create(orderInfo, pluginOptions, ...)
         type = "qrcode",
         qrcode = options['qrcode'],
         url = "",
+        scheme = "alipays://platformapi/startapp?appId=20000067&url=" .. helper.url_encode("https://render.alipay.com/p/s/i?scheme=" .. helper.url_encode("alipays://platformapi/startapp?appId=20000180&url=" .. helper.url_encode(orderPayHelper.get_toapp_url(orderInfoDe.order_id, orderInfoDe.host)))),
         content = "",
         out_trade_no = '',
         err_code = 200,
@@ -302,10 +319,10 @@ function plugin.parseMsg(msg)
             -- 判断渠道是否一样的
             if v.Code == msg['channel_code'] then
                 -- 匹配标题
-                local titleMatched =  helper.regexp_match(msg.title, v.TitleReg)
+                local titleMatched = helper.regexp_match(msg.title, v.TitleReg)
                 if titleMatched then
                     -- 调用正则
-                    local matched, matchGroups =  helper.regexp_match_group(msg.content, v.ContentReg)
+                    local matched, matchGroups = helper.regexp_match_group(msg.content, v.ContentReg)
 
                     -- 判断匹配是否成功
                     if matched == true then
@@ -339,8 +356,7 @@ function plugin.parseMsg(msg)
 
 end
 
-
-function plugin.buildMod11Html (pid ,money,order_id)
+function plugin.buildMod11Html (pid, money, order_id)
     return [[<!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -352,9 +368,9 @@ function plugin.buildMod11Html (pid ,money,order_id)
 </head>
 <body>
 <script>
-    var userId = "]].. pid ..[[";
-    var money = "]].. money ..[[";
-    var remark = "]].. order_id ..[[";
+    var userId = "]] .. pid .. [[";
+    var money = "]] .. money .. [[";
+    var remark = "]] .. order_id .. [[";
 
     function returnApp() {
         AlipayJSBridge.call("exitApp")
@@ -389,6 +405,80 @@ function plugin.buildMod11Html (pid ,money,order_id)
     document.addEventListener("resume", function (a) {
         returnApp()
     });
+</script>
+</body>
+</html>]]
+end
+
+function plugin.buildMod12Html (pid, money, order_id)
+    local url = string.format("https://render.alipay.com/p/yuyan/180020010001206672/rent-index.html?formData=%s", helper.url_encode(json.encode({
+        productCode = "TRANSFER_TO_ALIPAY_ACCOUNT",
+        bizScene = "YUEBAO",
+        outBizNo = "",
+        transAmount = money,
+        remark = order_id,
+        businessParams = {
+            returnUrl = "alipays://platformapi/startApp?appId=20000218&bizScenario=transoutXtrans"
+        },
+        payeeInfo = {
+            identity = pid,
+            identityType = "ALIPAY_USER_ID"
+        }
+    }
+    )))
+    return [[<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>收银台</title>
+    <script src="//gw.alipayobjects.com/as/g/h5-lib/alipayjsapi/3.1.1/alipayjsapi.min.js"></script>
+</head>
+<body>
+<script>
+    var userId = "]] .. pid .. [[";
+    var money = "]] .. money .. [[";
+    var remark = "]] .. order_id .. [[";
+
+     AlipayJSBridge.call('setTitleColor', {
+        color: parseInt('1959c1', 16),
+        reset: false
+    });
+    AlipayJSBridge.call('showTitleLoading');
+    AlipayJSBridge.call('setTitle', {
+        title: '请稍等..',
+        subtitle: 'XArrPay正在检测支付环境..'
+    });
+    AlipayJSBridge.call('setOptionMenu', {
+        icontype: 'filter',
+        redDot: '02',
+    });
+    AlipayJSBridge.call('showOptionMenu');
+    document.addEventListener('optionMenu', function(e) {
+        AlipayJSBridge.call('showPopMenu', {
+            menus: [{
+                name: '查看帮助',
+                tag: 'tag1',
+                redDot: ''
+            }, {
+                name: 'XArrPay',
+                tag: 'tag2',
+            }],
+        }, function(e) {
+            console.log(e)
+        })
+    }, false);
+
+    AlipayJSBridge.call("pushWindow", {
+        url: ']] .. url .. [[',
+        param: {
+            showToolBar: "NO"
+        }
+    });
+
+
+
 </script>
 </body>
 </html>]]

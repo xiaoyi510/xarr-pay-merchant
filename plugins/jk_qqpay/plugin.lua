@@ -24,8 +24,19 @@ plugin = {
         channels = {
             qqpay = {
                 {
-                    label = 'QQ个人码-监控端',
+                    label = 'QQ个人码-监控端-PC',
                     value = PAY_QQPAY_APP,
+                    -- 支持上报
+                    report = 1,
+                    -- 无上报SMS信息
+                    parse_msg = 0,
+                    options = {
+                        use_add_amount = 1,
+                    }
+                },
+                {
+                    label = 'QQ个人码-监控端-APP',
+                    value = 'qqpay_app',
                     -- 支持上报
                     report = 1,
                     -- 无上报SMS信息
