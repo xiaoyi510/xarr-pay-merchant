@@ -92,7 +92,7 @@
                 "version": "1.0.1",
                 "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/epusdt.zip",
                 "download_filename": "epusdt.zip",
-                "md5": "1ea2aa85976f1823fd4bd4e666f221eb"
+                "md5": "6970b8453522960ede51d069b5b4e922"
             },
             {
                 "uuid": "e47789cf3-4277-4fa1-b6e6-58b5f5111249",
@@ -110,7 +110,7 @@
                 "version": "1.0.0",
                 "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/usdt.zip",
                 "download_filename": "usdt.zip",
-                "md5": "6453dc4494e13ec31623aeab6bee0fdd"
+                "md5": "4de8c15d963f8f3dcfc0a4a85f449537"
             }
             
         ]
