@@ -111,8 +111,25 @@
                 "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/usdt.zip",
                 "download_filename": "usdt.zip",
                 "md5": "4de8c15d963f8f3dcfc0a4a85f449537"
+            },
+            {
+                "uuid": "9b22bbd6-676d-46f5-8c91-004d111e030b",
+                "name": "yun_alipay_xd",
+                "title": "支付宝云端-闲蛋",
+                "type": 1,
+                "description": "支付宝云端-闲蛋",
+                "author": "闲蛋",
+                "homepage": "https://www.xdau.cn/",
+                "preview_url": "",
+                "preview_img_url": "https://img.picui.cn/free/2024/10/08/6705417d54532.png",
+                "external_support_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
+                "external_repository_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
+                "update_time": "1728397939",
+                "version": "1.0.0",
+                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/yun_alipay_xd.zip",
+                "download_filename": "yun_alipay_xd.zip",
+                "md5": "02b9ec1d0862fc943322f8ebbe41c8fe"
             }
-            
         ]
     }
 }
