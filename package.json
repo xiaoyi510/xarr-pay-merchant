@@ -18,7 +18,7 @@
                 "external_repository_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
                 "update_time": 1727665799,
                 "version": "1.0.1",
-                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/jk_qqpay.zip",
+                "download_url": "https://ghp.ci/https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/jk_qqpay.zip",
                 "download_filename": "jk_qqpay.zip",
                 "md5": "7817fe1248ad57b981dfd10e0795a323"
             },
@@ -36,7 +36,7 @@
                 "external_repository_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
                 "update_time": 1726753440,
                 "version": "1.0.0",
-                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/jk_wechat.zip",
+                "download_url": "https://ghp.ci/https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/jk_wechat.zip",
                 "download_filename": "jk_wechat.zip",
                 "md5": "2cf8abb4c3ada87b9381450531e17d5f"
             },
@@ -54,7 +54,7 @@
                 "external_repository_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
                 "update_time": 1726753440,
                 "version": "1.0.1",
-                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/jk_alipay.zip",
+                "download_url": "https://ghp.ci/https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/jk_alipay.zip",
                 "download_filename": "jk_alipay.zip",
                 "md5": "a32235fde030f27e977e0abd8b3fb756"
             },
@@ -72,7 +72,7 @@
                 "external_repository_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
                 "update_time": 1726753440,
                 "version": "1.0.0",
-                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/jk_jdsyt.zip",
+                "download_url": "https://ghp.ci/https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/jk_jdsyt.zip",
                 "download_filename": "jk_jdsyt.zip",
                 "md5": "11c8fdaa1acf161cc9ece668c46553e3"
             },
@@ -90,7 +90,7 @@
                 "external_repository_url": "https://github.com/assimon/epusdt",
                 "update_time": 1727505302,
                 "version": "1.0.1",
-                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/epusdt.zip",
+                "download_url": "https://ghp.ci/https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/epusdt.zip",
                 "download_filename": "epusdt.zip",
                 "md5": "6970b8453522960ede51d069b5b4e922"
             },
@@ -108,7 +108,7 @@
                 "external_repository_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
                 "update_time": 1727622439,
                 "version": "1.0.0",
-                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/usdt.zip",
+                "download_url": "https://ghp.ci/https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/usdt.zip",
                 "download_filename": "usdt.zip",
                 "md5": "4de8c15d963f8f3dcfc0a4a85f449537"
             },
@@ -124,9 +124,9 @@
                 "preview_img_url": "https://img.picui.cn/free/2024/10/08/6705417d54532.png",
                 "external_support_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
                 "external_repository_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
-                "update_time": "1728397939",
+                "update_time": 1728397939,
                 "version": "1.0.0",
-                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/yun_alipay_xd.zip",
+                "download_url": "https://ghp.ci/https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/yun_alipay_xd.zip",
                 "download_filename": "yun_alipay_xd.zip",
                 "md5": "02b9ec1d0862fc943322f8ebbe41c8fe"
             }
