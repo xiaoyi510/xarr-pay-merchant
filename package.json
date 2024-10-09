@@ -124,11 +124,11 @@
                 "preview_img_url": "https://img.picui.cn/free/2024/10/08/6705417d54532.png",
                 "external_support_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
                 "external_repository_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
-                "update_time": 1728397939,
-                "version": "1.0.0",
-                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.0/yun_alipay_xd.zip",
+                "update_time": 1728488081,
+                "version": "1.0.1",
+                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/yun_alipay_xd.zip",
                 "download_filename": "yun_alipay_xd.zip",
-                "md5": "02b9ec1d0862fc943322f8ebbe41c8fe"
+                "md5": "9b935340d16259afc9d846902bae424c"
             }
         ]
     }
