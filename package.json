@@ -147,6 +147,24 @@
                 "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/yun_wechat_xd.zip",
                 "download_filename": "yun_wechat_xd.zip",
                 "md5": "e33600ada953c11d2e5eec0fb1309a2f"
+            },
+            {
+                "uuid": "ec30eaee-76c9-45c6-95ee-ff98e43f1d9c",
+                "name": "yun_wechat_uos_xd",
+                "title": "微信-UOS-XD",
+                "type": 1,
+                "description": "第三方辅助登录插件",
+                "author": "闲蛋",
+                "homepage": "https://www.xdau.cn/",
+                "preview_url": "",
+                "preview_img_url": "https://img.picui.cn/free/2024/10/08/6705417d54532.png",
+                "external_support_url": "https://www.xdau.cn/",
+                "external_repository_url": "",
+                "update_time": 1728569271,
+                "version": "1.0.0",
+                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/yun_wechat_uos_xd.zip",
+                "download_filename": "yun_wechat_uos_xd.zip",
+                "md5": "e33600ada953c11d2e5eec0fb1309a2f"
             }
         ]
     }
