@@ -128,7 +128,7 @@
                 "version": "1.0.1",
                 "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/yun_alipay_xd.zip",
                 "download_filename": "yun_alipay_xd.zip",
-                "md5": "f16fe1fee26e5231418e58f1c5eb251a"
+                "md5": "0f7f72a5caa21bfd6f280e3a4547a82f"
             },
             {
                 "uuid": "91367318-93c0-446a-a9b0-cbbbcbd75181",
@@ -146,7 +146,7 @@
                 "version": "1.0.0",
                 "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/yun_wechat_xd.zip",
                 "download_filename": "yun_wechat_xd.zip",
-                "md5": "e33600ada953c11d2e5eec0fb1309a2f"
+                "md5": "8e8f86535742c288becd6ccbf4d4ed90"
             },
             {
                 "uuid": "ec30eaee-76c9-45c6-95ee-ff98e43f1d9c",
@@ -164,7 +164,7 @@
                 "version": "1.0.0",
                 "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/yun_wechat_uos_xd.zip",
                 "download_filename": "yun_wechat_uos_xd.zip",
-                "md5": "0c89be4d16220a3e41d16346a047235b"
+                "md5": "7f70fe61fe60add627257c4c89b987d0"
             }
         ]
     }
