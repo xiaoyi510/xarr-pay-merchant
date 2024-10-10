@@ -115,7 +115,7 @@
             {
                 "uuid": "9b22bbd6-676d-46f5-8c91-004d111e030b",
                 "name": "yun_alipay_xd",
-                "title": "支付宝-Y扫码登录",
+                "title": "支付宝-XD",
                 "type": 1,
                 "description": "第三方辅助登录插件",
                 "author": "闲蛋",
@@ -128,7 +128,25 @@
                 "version": "1.0.1",
                 "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/yun_alipay_xd.zip",
                 "download_filename": "yun_alipay_xd.zip",
-                "md5": "9b935340d16259afc9d846902bae424c"
+                "md5": "f16fe1fee26e5231418e58f1c5eb251a"
+            }},
+            {
+                "uuid": "91367318-93c0-446a-a9b0-cbbbcbd75181",
+                "name": "yun_wechat_xd",
+                "title": "微信-XD",
+                "type": 1,
+                "description": "第三方辅助登录插件",
+                "author": "闲蛋",
+                "homepage": "https://www.xdau.cn/",
+                "preview_url": "",
+                "preview_img_url": "https://img.picui.cn/free/2024/10/08/6705417d54532.png",
+                "external_support_url": "https://www.xdau.cn/",
+                "external_repository_url": "",
+                "update_time": 1728488081,
+                "version": "1.0.0",
+                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/yun_wechat_xd.zip",
+                "download_filename": "yun_wechat_xd.zip",
+                "md5": "94ab46c35b46061cab17b1dc04c44cca"
             }
         ]
     }
