@@ -165,6 +165,24 @@
                 "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/yun_wechat_uos_xd.zip",
                 "download_filename": "yun_wechat_uos_xd.zip",
                 "md5": "7f70fe61fe60add627257c4c89b987d0"
+            },
+            {
+                "uuid": "affe673a-a5e4-4bad-bb7e-710a1dfcc2f9",
+                "name": "yun_wechat_uos",
+                "title": "微信-UOS",
+                "type": 1,
+                "description": "小工具",
+                "author": "包子",
+                "homepage": "https://blog.52nyg.com/",
+                "preview_url": "",
+                "preview_img_url": "https://apps.xarr.cn/assets/images/wxpay.png",
+                "external_support_url": "https://github.com/xiaoyi510/xarr-pay-merchant ",
+                "external_repository_url": "",
+                "update_time": 1728633100,
+                "version": "1.0.0",
+                "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/yun_wechat_uos.zip",
+                "download_filename": "yun_wechat_uos.zip",
+                "md5": "6369f5dafd8a278d9d0270e0c4469db4"
             }
         ]
     }
