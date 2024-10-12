@@ -52,11 +52,11 @@
                 "preview_img_url": "https://apps.xarr.cn/assets/images/alipay_logo.gif",
                 "external_support_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
                 "external_repository_url": "https://github.com/xiaoyi510/xarr-pay-merchant",
-                "update_time": 1726753440,
-                "version": "1.0.1",
+                "update_time": 1728700064,
+                "version": "1.0.2",
                 "download_url": "https://github.com/xiaoyi510/xarr-pay-merchant/releases/download/1.0.1/jk_alipay.zip",
                 "download_filename": "jk_alipay.zip",
-                "md5": "a32235fde030f27e977e0abd8b3fb756"
+                "md5": "b95118be1eeb77bc6def147d9954590e"
             },
             {
                 "uuid": "1b0ecb5e-fdfd-4cfa-85de-28d24242b781",
